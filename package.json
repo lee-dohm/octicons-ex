@@ -1,0 +1,7 @@
+{
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "octicons": "^5.0.1"
+  }
+}
