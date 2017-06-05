@@ -1,19 +1,11 @@
-# OcticonsEx
+# Octicons
 
-**TODO: Add description**
+Provides the SVG versions of [GitHub's Octicons][octicons] to an Elixir application.
 
-## Installation
+## License
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `octicons_ex` to your list of dependencies in `mix.exs`:
+All files except `priv/data.json`: [MIT](LICENSE.md)
 
-```elixir
-def deps do
-  [{:octicons_ex, "~> 0.1.0"}]
-end
-```
+`priv/data.json` is included from https://github.com/primer/octicons under the [MIT license](https://github.com/primer/octicons/blob/master/LICENSE) and is copyright GitHub, Inc.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/octicons_ex](https://hexdocs.pm/octicons_ex).
-
+[octicons]: https://octicons.github.com/

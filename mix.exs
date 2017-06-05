@@ -8,9 +8,11 @@ defmodule Octicons.Mixfile do
       deps: deps(),
 
       name: "Octicons",
+      description: "Provides the SVG versions of GitHub's Octicons to an Elixir application",
       source_url: "https://github.com/lee-dohm/octicons_ex",
       homepage_url: "https://github.com/lee-dohm/octicons_ex",
       docs: docs(),
+      package: package(),
 
       elixir: "~> 1.4",
       build_embedded: Mix.env == :prod,
@@ -27,14 +29,24 @@ defmodule Octicons.Mixfile do
 
   defp deps do
     [
+      {:poison, "~> 3.1"},
+      {:cmark, "~> 0.7.0", only: :dev},
       {:ex_doc, "~> 0.16.1", only: :dev, runtime: false}
     ]
   end
 
   defp docs do
     [
-      main: "Octicons",
-      extras: ["README.md"]
+      main: "readme",
+      extras: ["README.md", "LICENSE.md"]
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      maintainers: ["Lee Dohm"],
+      links: %{"GitHub" => "https://github.com/lee-dohm/octicons-ex"}
     ]
   end
 end
