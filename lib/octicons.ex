@@ -72,6 +72,18 @@ defmodule Octicons do
     "<svg #{html_attributes(symbol, options)}>#{path}</svg>"
   end
 
+  @doc """
+  Get the version of the packaged Octicons data.
+
+  ## Example
+
+      iex> Octicons.version()
+      "5.0.1"
+  """
+  def version do
+    Storage.get_version()
+  end
+
   defp aria(map, %{"aria-label" => label}) do
     map
     |> Map.merge(%{"aria-label" => label})

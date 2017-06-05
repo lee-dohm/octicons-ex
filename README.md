@@ -4,12 +4,13 @@ Provides the SVG versions of [GitHub's Octicons][octicons] to an Elixir applicat
 
 ## Octicons Version
 
-v5.0.1
+See the documentation on how to get the version of the packaged Octicons.
 
 ## License
 
-All files except `priv/data.json`: [MIT](LICENSE.md)
+All files except the contents of the `priv` directory: [MIT](LICENSE.md)
 
-`priv/data.json` is included from https://github.com/primer/octicons under the [MIT license](https://github.com/primer/octicons/blob/master/LICENSE) and is copyright GitHub, Inc.
+Files in `priv` are included from https://github.com/primer/octicons under the [MIT license][octicons-license] and is copyright GitHub, Inc.
 
 [octicons]: https://octicons.github.com/
+[octicons-license]: https://github.com/primer/octicons/blob/master/LICENSE

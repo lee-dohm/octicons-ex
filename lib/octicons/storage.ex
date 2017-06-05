@@ -2,17 +2,41 @@ defmodule Octicons.Storage do
   @moduledoc false
 
   def start_link do
-    data_path = Path.expand("../../priv/data.json", __DIR__)
+    data = read_octicons_data()
+    metadata = read_octicons_metadata()
 
-    data =
-      with {:ok, text} <- File.read(data_path),
-           {:ok, data} <- Poison.decode(text),
-           do: data
-
-    Agent.start_link(fn -> data end, name: __MODULE__)
+    Agent.start_link(fn -> %{data: data, metadata: metadata} end, name: __MODULE__)
   end
 
   def get_data(key) do
-    Agent.get(__MODULE__, &Map.get(&1, key))
+    Agent.get(__MODULE__, fn(storage) ->
+      storage
+      |> Map.get(:data)
+      |> Map.get(key)
+    end)
+  end
+
+  def get_version do
+    Agent.get(__MODULE__, fn(storage) ->
+      storage
+      |> Map.get(:metadata)
+      |> Map.get("version")
+    end)
+  end
+
+  defp read_octicons_data do
+    data_path = Path.expand("../../priv/data.json", __DIR__)
+
+    with {:ok, text} <- File.read(data_path),
+         {:ok, data} <- Poison.decode(text),
+         do: data
+  end
+
+  defp read_octicons_metadata do
+    metadata_path = Path.expand("../../priv/package.json", __DIR__)
+
+    with {:ok, text} <- File.read(metadata_path),
+         {:ok, metadata} <- Poison.decode(text),
+         do: metadata
   end
 end
