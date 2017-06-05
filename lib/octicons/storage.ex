@@ -25,7 +25,7 @@ defmodule Octicons.Storage do
   end
 
   defp read_octicons_data do
-    data_path = Path.expand("../../priv/data.json", __DIR__)
+    data_path = Path.expand("data.json", priv_dir())
 
     with {:ok, text} <- File.read(data_path),
          {:ok, data} <- Poison.decode(text),
@@ -33,10 +33,14 @@ defmodule Octicons.Storage do
   end
 
   defp read_octicons_metadata do
-    metadata_path = Path.expand("../../priv/package.json", __DIR__)
+    metadata_path = Path.expand("package.json", priv_dir())
 
     with {:ok, text} <- File.read(metadata_path),
          {:ok, metadata} <- Poison.decode(text),
          do: metadata
+  end
+
+  defp priv_dir do
+    Path.join([File.cwd!(), "_build", Atom.to_string(Mix.env), "lib", "octicons", "priv"])
   end
 end
