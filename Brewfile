@@ -1,0 +1,2 @@
+brew "elixir"
+brew "nodenv"
