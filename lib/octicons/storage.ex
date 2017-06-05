@@ -1,7 +1,5 @@
 defmodule Octicons.Storage do
-  @moduledoc """
-  Stores the Octicons data for easy retrieval.
-  """
+  @moduledoc false
 
   def start_link do
     data_path = Path.expand("../../priv/data.json", __DIR__)

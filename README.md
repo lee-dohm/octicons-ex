@@ -2,6 +2,10 @@
 
 Provides the SVG versions of [GitHub's Octicons][octicons] to an Elixir application.
 
+## Octicons Version
+
+v5.0.1
+
 ## License
 
 All files except `priv/data.json`: [MIT](LICENSE.md)

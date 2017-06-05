@@ -2,9 +2,12 @@ defmodule Octicons do
   @moduledoc """
   Octicons are a scalable set of icons handcrafted with <3 by GitHub.
 
-  This module is designed to operate identically to the [Node module][octicons-node] of the same
-  name.
+  See [the website][octicons] for an up-to-date reference of all of the available icons.
 
+  > **Note:** This module is designed to operate identically to the [Node module][octicons-node] of
+  the same name.
+
+  [octicons]: https://octicons.github.com/
   [octicons-node]: https://www.npmjs.com/package/octicons
   """
 
