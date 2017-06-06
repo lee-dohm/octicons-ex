@@ -2,8 +2,8 @@ defmodule Octicons.Storage do
   @moduledoc false
 
   def start_link do
-    data = read_octicons_data()
-    metadata = read_octicons_metadata()
+    {:ok, data} = read_octicons_data()
+    {:ok, metadata} = read_octicons_metadata()
 
     Agent.start_link(fn -> %{data: data, metadata: metadata} end, name: __MODULE__)
   end
@@ -29,7 +29,7 @@ defmodule Octicons.Storage do
 
     with {:ok, text} <- File.read(data_path),
          {:ok, data} <- Poison.decode(text),
-         do: data
+         do: {:ok, data}
   end
 
   defp read_octicons_metadata do
@@ -37,7 +37,7 @@ defmodule Octicons.Storage do
 
     with {:ok, text} <- File.read(metadata_path),
          {:ok, metadata} <- Poison.decode(text),
-         do: metadata
+         do: {:ok, metadata}
   end
 
   defp priv_dir do
