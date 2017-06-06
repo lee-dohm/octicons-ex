@@ -3,6 +3,7 @@ defmodule Octicons.Storage do
 
   require Logger
 
+  @spec start_link :: Agent.on_start | no_return
   def start_link do
     {:ok, data} = read_octicons_data()
     {:ok, metadata} = read_octicons_metadata()
@@ -10,6 +11,7 @@ defmodule Octicons.Storage do
     Agent.start_link(fn -> %{data: data, metadata: metadata} end, name: __MODULE__)
   end
 
+  @spec get_data(String.t) :: map | nil
   def get_data(key) do
     Agent.get(__MODULE__, fn(storage) ->
       storage
@@ -18,6 +20,7 @@ defmodule Octicons.Storage do
     end)
   end
 
+  @spec get_version :: String.t | nil
   def get_version do
     Agent.get(__MODULE__, fn(storage) ->
       storage

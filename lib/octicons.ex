@@ -17,7 +17,7 @@ defmodule Octicons do
   @type t :: map
 
   @doc """
-  Retrieves the attributes of the icon.
+  Retrieves the attributes of the icon or `nil` if the named icon doesn't exist.
 
   ## Examples
 
@@ -30,14 +30,13 @@ defmodule Octicons do
         "symbol" => "beaker", "version" => "1.1", "viewBox" => "0 0 16 16",
         "width" => "16"}
   """
-  @spec icon(octicon_name) :: t
+  @spec icon(octicon_name) :: t | nil
   def icon(name) when is_atom(name), do: icon(Atom.to_string(name))
 
   def icon(name) do
     name
     |> Storage.get_data
-    |> Map.merge(default_options(name))
-    |> Map.merge(%{"symbol" => name})
+    |> merge_additional_info(name)
   end
 
   @doc """
@@ -60,6 +59,8 @@ defmodule Octicons do
   """
   @spec toSVG(octicon_name | t, keyword) :: String.t
   def toSVG(icon, options \\ [])
+
+  def toSVG(nil, _), do: nil
 
   def toSVG(name, options) when is_atom(name) or is_binary(name), do: toSVG(icon(name), options)
 
@@ -135,7 +136,7 @@ defmodule Octicons do
 
   defp dimensions(map, _, _), do: map
 
-  defp default_options(key) do
+  def default_options(key) do
     data = Storage.get_data(key)
 
     %{
@@ -162,6 +163,14 @@ defmodule Octicons do
     |> Enum.map(fn({key, value}) -> "#{key}=\"#{value}\"" end)
     |> Enum.join(" ")
     |> String.trim
+  end
+
+  defp merge_additional_info(nil, _), do: nil
+
+  defp merge_additional_info(map, name) do
+    map
+    |> Map.merge(default_options(name))
+    |> Map.merge(%{"symbol" => name})
   end
 
   defp parse_int(text) do
