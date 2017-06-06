@@ -1,10 +1,12 @@
 defmodule Octicons.Mixfile do
   use Mix.Project
 
+  @version "0.1.1"
+
   def project do
     [
       app: :octicons,
-      version: "0.1.0",
+      version: @version,
       deps: deps(),
 
       name: "Octicons",
