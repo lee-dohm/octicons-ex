@@ -144,7 +144,7 @@ defmodule Octicons do
 
   defp dimensions(map, _, _), do: map
 
-  def default_options(key) do
+  defp default_options(key) do
     data = Storage.get_data(key)
 
     %{
