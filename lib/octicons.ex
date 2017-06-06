@@ -64,7 +64,7 @@ defmodule Octicons do
 
   def toSVG(name, options) when is_atom(name) or is_binary(name), do: toSVG(icon(name), options)
 
-  def toSVG(icon_data, options) when is_list(options), do: toSVG(icon_data, Enum.into(options, %{}))
+  def toSVG(icon_data, options) when is_list(options), do: toSVG(icon_data, to_string_key_map(options))
 
   def toSVG(icon_data = %{}, options) do
     symbol = icon_data["symbol"]
@@ -105,6 +105,14 @@ defmodule Octicons do
 
   defp class(map, _, _), do: map
 
+  defp dimensions(map, key, options = %{"height" => height}) when not is_binary(height) do
+    dimensions(map, key, Map.put(options, "height", Integer.to_string(height)))
+  end
+
+  defp dimensions(map, key, options = %{"width" => width}) when not is_binary(width) do
+    dimensions(map, key, Map.put(options, "width", Integer.to_string(width)))
+  end
+
   defp dimensions(map, _, %{"height" => height, "width" => width}) do
     map
     |> Map.merge(%{"height" => height, "width" => width})
@@ -117,7 +125,7 @@ defmodule Octicons do
     |> Map.merge(
       %{
         "height" => height,
-        "width" => parse_int(height) * parse_int(data["width"]) / parse_int(data["height"])
+        "width" => round(parse_int(height) * parse_int(data["width"]) / parse_int(data["height"]))
       }
     )
   end
@@ -128,7 +136,7 @@ defmodule Octicons do
     map
     |> Map.merge(
       %{
-        "height" => parse_int(width) * parse_int(data["height"]) / parse_int(data["width"]),
+        "height" => round(parse_int(width) * parse_int(data["height"]) / parse_int(data["width"])),
         "width" => width
       }
     )
@@ -177,5 +185,13 @@ defmodule Octicons do
     {int, _} = Integer.parse(text)
 
     int
+  end
+
+  defp to_string_key_map(list) do
+    list
+    |> Enum.reduce(%{}, fn({key, value}, map) ->
+         map
+         |> Map.put(Atom.to_string(key), value)
+       end)
   end
 end

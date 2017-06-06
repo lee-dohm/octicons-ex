@@ -33,4 +33,38 @@ defmodule Octicons.Test do
   test "toSVG on icon that doesn't exist returns nil" do
     refute Octicons.toSVG("supercalifragilisticexpialidocious")
   end
+
+  test "when aria-label is specified, aria-hidden is removed and img role is added" do
+    svg = Octicons.toSVG("beaker", "aria-label": "foo")
+
+    refute svg =~ "aria-hidden"
+    assert svg =~ "role=\"img\""
+  end
+
+  test "height and width are respected when both are specified" do
+    svg = Octicons.toSVG("beaker", height: 300, width: 400)
+
+    assert svg =~ "height=\"300\""
+    assert svg =~ "width=\"400\""
+  end
+
+  test "width is scaled when height is specified" do
+    svg = Octicons.toSVG("beaker", height: 400)
+
+    assert svg =~ "height=\"400\""
+    assert svg =~ "width=\"400\""
+  end
+
+  test "height is scaled when width is specified" do
+    svg = Octicons.toSVG("beaker", width: 400)
+
+    assert svg =~ "height=\"400\""
+    assert svg =~ "width=\"400\""
+  end
+
+  test "additional classes are added on when given" do
+    svg = Octicons.toSVG("beaker", class: "foo bar baz")
+
+    assert svg =~ "class=\"octicons octicons-beaker foo bar baz\""
+  end
 end
