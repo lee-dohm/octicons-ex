@@ -11,8 +11,8 @@ defmodule Octicons.Mixfile do
 
       name: "Octicons",
       description: "Provides the SVG versions of GitHub's Octicons to an Elixir application",
-      source_url: "https://github.com/lee-dohm/octicons_ex",
-      homepage_url: "https://github.com/lee-dohm/octicons_ex",
+      source_url: "https://github.com/lee-dohm/octicons-ex",
+      homepage_url: "https://github.com/lee-dohm/octicons-ex",
       docs: docs(),
       package: package(),
 
