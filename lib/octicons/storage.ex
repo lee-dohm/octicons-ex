@@ -2,8 +2,8 @@ defmodule Octicons.Storage do
   @moduledoc false
 
   def start_link do
-    data = read_octicons_data()
-    metadata = read_octicons_metadata()
+    {:ok, data} = read_octicons_data()
+    {:ok, metadata} = read_octicons_metadata()
 
     Agent.start_link(fn -> %{data: data, metadata: metadata} end, name: __MODULE__)
   end
@@ -25,18 +25,34 @@ defmodule Octicons.Storage do
   end
 
   defp read_octicons_data do
-    data_path = Path.expand("../../priv/data.json", __DIR__)
+    data_path = Path.expand("data.json", priv_dir())
 
     with {:ok, text} <- File.read(data_path),
-         {:ok, data} <- Poison.decode(text),
-         do: data
+         {:ok, data} <- Poison.decode(text)
+    do
+      {:ok, data}
+    else
+      err ->
+        Logger.error("Error when reading Octicons data from priv directory: #{inspect(err)}")
+        err
+    end
   end
 
   defp read_octicons_metadata do
-    metadata_path = Path.expand("../../priv/package.json", __DIR__)
+    metadata_path = Path.expand("package.json", priv_dir())
 
     with {:ok, text} <- File.read(metadata_path),
-         {:ok, metadata} <- Poison.decode(text),
-         do: metadata
+         {:ok, metadata} <- Poison.decode(text)
+    do
+      {:ok, metadata}
+    else
+      err ->
+        Logger.error("Error when reading Octicons metadata from priv directory: #{inspect(err)}")
+        err
+    end
+  end
+
+  defp priv_dir do
+    Path.join([File.cwd!(), "_build", Atom.to_string(Mix.env), "lib", "octicons", "priv"])
   end
 end
