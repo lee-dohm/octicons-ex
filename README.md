@@ -8,7 +8,7 @@ Provides the SVG versions of [GitHub's Octicons][octicons] to an Elixir applicat
 
 ## Octicons Version
 
-See the documentation on how to get the version of the packaged Octicons.
+See [the documentation](https://hexdocs.pm/octicons/Octicons.html#version/0) on how to get the version of the packaged Octicons.
 
 ## License
 
