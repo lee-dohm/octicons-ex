@@ -1,6 +1,8 @@
 defmodule Octicons.Storage do
   @moduledoc false
 
+  require Logger
+
   def start_link do
     {:ok, data} = read_octicons_data()
     {:ok, metadata} = read_octicons_metadata()
