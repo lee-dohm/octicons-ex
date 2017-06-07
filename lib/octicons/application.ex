@@ -11,7 +11,7 @@ defmodule Octicons.Application do
       worker(Octicons.Storage, [])
     ]
 
-    opts = [strategy: :one_for_one, name: OcticonsEx.Supervisor]
+    opts = [strategy: :one_for_one, name: Octicons.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
