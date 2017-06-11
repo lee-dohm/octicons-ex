@@ -95,8 +95,7 @@ defmodule Octicons do
   defp aria(map, _), do: map
 
   defp class(map, key, %{"class" => option_class}) do
-    map
-    |> Map.merge(
+    Map.merge(map,
       %{
         "class" => String.trim("octicons octicons-#{key} #{option_class}")
       }
@@ -114,15 +113,13 @@ defmodule Octicons do
   end
 
   defp dimensions(map, _, %{"height" => height, "width" => width}) do
-    map
-    |> Map.merge(%{"height" => height, "width" => width})
+    Map.merge(map, %{"height" => height, "width" => width})
   end
 
   defp dimensions(map, key, %{"height" => height}) do
     data = Storage.get_data(key)
 
-    map
-    |> Map.merge(
+    Map.merge(map,
       %{
         "height" => height,
         "width" => round(parse_int(height) * parse_int(data["width"]) / parse_int(data["height"]))
@@ -133,8 +130,7 @@ defmodule Octicons do
   defp dimensions(map, key, %{"width" => width}) do
     data = Storage.get_data(key)
 
-    map
-    |> Map.merge(
+    Map.merge(map,
       %{
         "height" => round(parse_int(width) * parse_int(data["height"]) / parse_int(data["width"])),
         "width" => width
@@ -188,10 +184,6 @@ defmodule Octicons do
   end
 
   defp to_string_key_map(list) do
-    list
-    |> Enum.reduce(%{}, fn({key, value}, map) ->
-         map
-         |> Map.put(Atom.to_string(key), value)
-       end)
+    Enum.reduce(list, %{}, fn({key, value}, map) -> Map.put(map, Atom.to_string(key), value) end)
   end
 end
