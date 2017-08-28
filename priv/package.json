@@ -2,56 +2,58 @@
   "_args": [
     [
       {
-        "raw": "octicons@^5.0.1",
+        "raw": "octicons@^6.0.1",
         "scope": null,
         "escapedName": "octicons",
         "name": "octicons",
-        "rawSpec": "^5.0.1",
-        "spec": ">=5.0.1 <6.0.0",
+        "rawSpec": "^6.0.1",
+        "spec": ">=6.0.1 <7.0.0",
         "type": "range"
       },
-      "/Users/Lee/Source/lee-dohm/octicons_ex"
+      "/Users/Lee/Source/lee-dohm/octicons-ex"
     ]
   ],
-  "_from": "octicons@>=5.0.1 <6.0.0",
-  "_id": "octicons@5.0.1",
+  "_from": "octicons@>=6.0.1 <7.0.0",
+  "_id": "octicons@6.0.1",
   "_inCache": true,
   "_location": "/octicons",
-  "_nodeVersion": "4.4.5",
+  "_nodeVersion": "8.2.1",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/octicons-5.0.1.tgz_1477792501316_0.693349968874827"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/octicons-6.0.1.tgz_1502465684832_0.32366147078573704"
   },
   "_npmUser": {
     "name": "jonrohan",
     "email": "yes@jonrohan.codes"
   },
-  "_npmVersion": "3.10.8",
+  "_npmVersion": "5.3.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "octicons@^5.0.1",
+    "raw": "octicons@^6.0.1",
     "scope": null,
     "escapedName": "octicons",
     "name": "octicons",
-    "rawSpec": "^5.0.1",
-    "spec": ">=5.0.1 <6.0.0",
+    "rawSpec": "^6.0.1",
+    "spec": ">=6.0.1 <7.0.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/octicons/-/octicons-5.0.1.tgz",
-  "_shasum": "0fa0c4fd3680d251266f073736539317cb846e4f",
+  "_resolved": "https://registry.npmjs.org/octicons/-/octicons-6.0.1.tgz",
+  "_shasum": "481f4947780c495e42eef113e5b764075e226b84",
   "_shrinkwrap": null,
-  "_spec": "octicons@^5.0.1",
-  "_where": "/Users/Lee/Source/lee-dohm/octicons_ex",
+  "_spec": "octicons@^6.0.1",
+  "_where": "/Users/Lee/Source/lee-dohm/octicons-ex",
   "author": {
     "name": "GitHub Inc."
   },
   "bugs": {
     "url": "https://github.com/primer/octicons/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "object-assign": "^4.1.1"
+  },
   "description": "A scalable set of icons handcrafted with <3 by GitHub.",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -65,14 +67,15 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "0fa0c4fd3680d251266f073736539317cb846e4f",
-    "tarball": "https://registry.npmjs.org/octicons/-/octicons-5.0.1.tgz"
+    "integrity": "sha512-NaLn2khboD1Teg2TGQnu618FbmMedt19XKy9EaRNirBK36U/HntlvwgDvAkxgUien+f8NUeKBpBunxweIK4cCQ==",
+    "shasum": "481f4947780c495e42eef113e5b764075e226b84",
+    "tarball": "https://registry.npmjs.org/octicons/-/octicons-6.0.1.tgz"
   },
   "files": [
     "index.js",
     "build"
   ],
-  "gitHead": "720fb694000e7ecc378e94299f0ee5287418f9c4",
+  "gitHead": "d5dffe2d5f2292fb8537784f222d1263b7ee0377",
   "homepage": "https://octicons.github.com",
   "keywords": [
     "GitHub",
@@ -84,8 +87,44 @@
   "main": "index.js",
   "maintainers": [
     {
+      "name": "keithamus",
+      "email": "npm@keithcirkel.co.uk"
+    },
+    {
+      "name": "primer-css",
+      "email": "design-systems@github.com"
+    },
+    {
+      "name": "shawnbot",
+      "email": "shawnbot-npm@nym.hush.com"
+    },
+    {
+      "name": "muan",
+      "email": "me@muanchiou.com"
+    },
+    {
+      "name": "mdo",
+      "email": "markdotto@gmail.com"
+    },
+    {
+      "name": "josh",
+      "email": "josh@joshpeek.com"
+    },
+    {
+      "name": "mislav",
+      "email": "mislav.marohnic@gmail.com"
+    },
+    {
+      "name": "broccolini",
+      "email": "diana.mounter@gmail.com"
+    },
+    {
       "name": "jonrohan",
       "email": "yes@jonrohan.codes"
+    },
+    {
+      "name": "dgraham",
+      "email": "david.malcom.graham@gmail.com"
     }
   ],
   "name": "octicons",
@@ -101,5 +140,5 @@
     "test": "npm run build && ava --verbose \"test/**/*.js\""
   },
   "style": "build/octicons.css",
-  "version": "5.0.1"
+  "version": "6.0.1"
 }
