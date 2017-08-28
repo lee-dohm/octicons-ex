@@ -2,6 +2,6 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "octicons": "^5.0.1"
+    "octicons": "^6.0.1"
   }
 }
