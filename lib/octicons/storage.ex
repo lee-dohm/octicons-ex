@@ -13,20 +13,12 @@ defmodule Octicons.Storage do
 
   @spec get_data(String.t) :: map | nil
   def get_data(key) do
-    Agent.get(__MODULE__, fn(storage) ->
-      storage
-      |> Map.get(:data)
-      |> Map.get(key)
-    end)
+    Agent.get(__MODULE__, fn(storage) -> get_in(storage, [:data, key]) end)
   end
 
   @spec get_version :: String.t | nil
   def get_version do
-    Agent.get(__MODULE__, fn(storage) ->
-      storage
-      |> Map.get(:metadata)
-      |> Map.get("version")
-    end)
+    Agent.get(__MODULE__, fn(storage) -> get_in(storage, [:metadata, "version"]) end)
   end
 
   defp read_octicons_data do
