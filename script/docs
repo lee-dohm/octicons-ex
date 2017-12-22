@@ -3,5 +3,18 @@
 set -e
 cd "$(dirname "$0")/.."
 
+while test $# -gt 0
+do
+    case "$1" in
+        --open) open="1"
+            ;;
+    esac
+    shift
+done
+
 script/update
 mix docs
+
+if [ -n "$open" ]; then
+  open doc/index.html
+fi
