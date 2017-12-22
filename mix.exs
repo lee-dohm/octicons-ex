@@ -34,10 +34,10 @@ defmodule Octicons.Mixfile do
 
   defp deps do
     [
-      {:poison, "~> 2.0"},
-      {:cmark, "~> 0.7.0", only: :dev},
-      {:ex_doc, "~> 0.16.1", only: :dev, runtime: false},
-      {:espec, "~> 1.4.0", only: :test}
+      {:poison, "~> 3.0"},
+      {:cmark, "~> 0.7", only: :dev},
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:espec, "~> 1.5", only: :test}
     ]
   end
 
