@@ -18,10 +18,7 @@ defmodule Octicons.Mixfile do
 
       elixir: "~> 1.4",
       build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
-      preferred_cli_env: [
-        espec: :test
-      ]
+      start_permanent: Mix.env == :prod
     ]
   end
 
@@ -36,8 +33,7 @@ defmodule Octicons.Mixfile do
     [
       {:poison, "~> 3.0"},
       {:cmark, "~> 0.7", only: :dev},
-      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
-      {:espec, "~> 1.5", only: :test}
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false}
     ]
   end
 

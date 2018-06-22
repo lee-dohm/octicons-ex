@@ -122,7 +122,7 @@ defmodule Octicons do
     Map.merge(map,
       %{
         "height" => height,
-        "width" => round(parse_int(height) * parse_int(data["width"]) / parse_int(data["height"]))
+        "width" => round(parse_int(height) * data["width"] / data["height"])
       }
     )
   end
@@ -132,7 +132,7 @@ defmodule Octicons do
 
     Map.merge(map,
       %{
-        "height" => round(parse_int(width) * parse_int(data["height"]) / parse_int(data["width"])),
+        "height" => round(parse_int(width) * data["height"] / data["width"]),
         "width" => width
       }
     )
@@ -161,8 +161,7 @@ defmodule Octicons do
     |> dimensions(key, options)
     |> class(key, options)
     |> aria(options)
-    |> Map.delete("keywords")
-    |> Map.delete("path")
+    |> Map.drop(["figma", "keywords", "name", "path"])
     |> Map.to_list
     |> Enum.map(fn({key, value}) -> "#{key}=\"#{value}\"" end)
     |> Enum.join(" ")
