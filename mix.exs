@@ -16,7 +16,7 @@ defmodule Octicons.Mixfile do
       docs: docs(),
       package: package(),
 
-      elixir: "~> 1.4",
+      elixir: "~> 1.7",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod
     ]
