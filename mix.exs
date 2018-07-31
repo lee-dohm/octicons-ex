@@ -31,7 +31,7 @@ defmodule Octicons.Mixfile do
 
   defp deps do
     [
-      {:poison, "~> 3.0"},
+      {:poison, "~> 4.0"},
       {:cmark, "~> 0.7", only: :dev},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false}
     ]
