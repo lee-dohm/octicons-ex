@@ -50,6 +50,6 @@ defmodule Octicons.Storage do
   end
 
   defp priv_dir do
-    Path.join([File.cwd!(), "_build", Atom.to_string(Mix.env), "lib", "octicons", "priv"])
+    :code.priv_dir(:octicons)
   end
 end
