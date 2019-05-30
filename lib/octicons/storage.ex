@@ -25,7 +25,7 @@ defmodule Octicons.Storage do
     data_path = Path.expand("data.json", priv_dir())
 
     with {:ok, text} <- File.read(data_path),
-         {:ok, data} <- Poison.decode(text)
+         {:ok, data} <- Jason.decode(text)
     do
       {:ok, data}
     else
@@ -39,7 +39,7 @@ defmodule Octicons.Storage do
     metadata_path = Path.expand("package.json", priv_dir())
 
     with {:ok, text} <- File.read(metadata_path),
-         {:ok, metadata} <- Poison.decode(text)
+         {:ok, metadata} <- Jason.decode(text)
     do
       {:ok, metadata}
     else
