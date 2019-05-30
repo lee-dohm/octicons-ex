@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# script/bump: Increments the version by major|minor|patch, creates a release commit, creates a
+#              release tag, and pushes to the remote repo
+
+set -e
+cd "$(dirname "$0")/.."
+
+update_file()
+{
+  REGEX=$1
+  REPLACEMENT=$2
+  shift; shift;
+  FILES=$@
+
+  sed -E -i .backup "s/$REGEX/$REPLACEMENT/g" $FILES
+}
+
+script/test
+script/docs
+
+mix version.inc $1
+version_text=v$(mix version.current)
+git commit -am "Release $version_text"
+git tag "$version_text"
+git push --tags origin master

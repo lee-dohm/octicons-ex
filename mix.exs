@@ -33,7 +33,8 @@ defmodule Octicons.Mixfile do
     [
       {:poison, "~> 4.0"},
       {:cmark, "~> 0.7", only: :dev},
-      {:ex_doc, "~> 0.16", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:version_tasks, "~> 0.11.3", only: :dev}
     ]
   end
 
