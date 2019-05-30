@@ -2,49 +2,51 @@
   "_args": [
     [
       {
-        "raw": "octicons@^6.0.1",
+        "raw": "octicons@8.5.0",
         "scope": null,
         "escapedName": "octicons",
         "name": "octicons",
-        "rawSpec": "^6.0.1",
-        "spec": ">=6.0.1 <7.0.0",
-        "type": "range"
+        "rawSpec": "8.5.0",
+        "spec": "8.5.0",
+        "type": "version"
       },
-      "/Users/Lee/Source/lee-dohm/octicons-ex"
+      "/Users/lee/Source/lee-dohm/octicons-ex"
     ]
   ],
-  "_from": "octicons@>=6.0.1 <7.0.0",
-  "_id": "octicons@6.0.1",
+  "_from": "octicons@8.5.0",
+  "_hasShrinkwrap": false,
+  "_id": "octicons@8.5.0",
   "_inCache": true,
   "_location": "/octicons",
-  "_nodeVersion": "8.2.1",
+  "_nodeVersion": "10.15.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/octicons-6.0.1.tgz_1502465684832_0.32366147078573704"
+    "tmp": "tmp/octicons_8.5.0_1551287918915_0.5684228410565375"
   },
   "_npmUser": {
-    "name": "jonrohan",
-    "email": "yes@jonrohan.codes"
+    "name": "primer-css",
+    "email": "design-systems@github.com"
   },
-  "_npmVersion": "5.3.0",
+  "_npmVersion": "6.4.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "octicons@^6.0.1",
+    "raw": "octicons@8.5.0",
     "scope": null,
     "escapedName": "octicons",
     "name": "octicons",
-    "rawSpec": "^6.0.1",
-    "spec": ">=6.0.1 <7.0.0",
-    "type": "range"
+    "rawSpec": "8.5.0",
+    "spec": "8.5.0",
+    "type": "version"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/octicons/-/octicons-6.0.1.tgz",
-  "_shasum": "481f4947780c495e42eef113e5b764075e226b84",
+  "_resolved": "https://registry.npmjs.org/octicons/-/octicons-8.5.0.tgz",
+  "_shasum": "b64383093e1469dc169fd2a76946fccc25f6bbf1",
   "_shrinkwrap": null,
-  "_spec": "octicons@^6.0.1",
-  "_where": "/Users/Lee/Source/lee-dohm/octicons-ex",
+  "_spec": "octicons@8.5.0",
+  "_where": "/Users/lee/Source/lee-dohm/octicons-ex",
   "author": {
     "name": "GitHub Inc."
   },
@@ -56,26 +58,19 @@
   },
   "description": "A scalable set of icons handcrafted with <3 by GitHub.",
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "ava": "^0.16.0",
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-cssnano": "^2.1.0",
-    "grunt-svgmin": "^4.0.0",
-    "grunt-svgstore": "^1.0.0"
+    "ava": "^0.22.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-github": "^1.6.0"
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-NaLn2khboD1Teg2TGQnu618FbmMedt19XKy9EaRNirBK36U/HntlvwgDvAkxgUien+f8NUeKBpBunxweIK4cCQ==",
-    "shasum": "481f4947780c495e42eef113e5b764075e226b84",
-    "tarball": "https://registry.npmjs.org/octicons/-/octicons-6.0.1.tgz"
+    "integrity": "sha512-l4GCHwBvStuwVfIuqUx/ktFJQJdCqLnd0bi2dvYZzkza6wj9EUksfMUlTqyVMULbPIvRTXxOqn/W07fsMu1bXA==",
+    "shasum": "b64383093e1469dc169fd2a76946fccc25f6bbf1",
+    "tarball": "https://registry.npmjs.org/octicons/-/octicons-8.5.0.tgz",
+    "fileCount": 191,
+    "unpackedSize": 167137,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcdsZvCRA9TVsSAnZWagAAsC8P/i8pNo81aeaYmfDRAnj1\nf+wbNUjkCH/TYvpsrxb5v2hM8b/WNzEfbu1czfs5VAG2wiv8CKwWLgikiP/1\n9tyhxvJhuiOE3s6e/P66kZVIyXW1egdUSdrS22Ew3PxCYYm2IHCj4J9ruwfU\nApDF5byBF6xG4LjaxUu8SVJ4e+PyiFNLnJxBJQPsmINCA8uSaD/W9DIPhh3Q\ng0WyqnkEhfFdGUg+9yJBbh9Szvt/79t4ZV/hlv27xx3dixZVj5FmLaCZmV6m\nCS1reHKVIrPIDuP5K3ZXTFDZUgyYPSJasKCI2vKxg1aNs0287MGRawPHyRCw\n1Lz71CNWFmx3F9u/2G0sW61gbOUgZP7aFKGtcbbb9hnq6Jecdpv1vH09bpuv\nXf2U/1L8lLESXPXzFlBSJQ1aAyANUXddd+/kxmgfmabgGF2AVNlkacSnVKeK\nC/C5D5sNk1rziesEBO7Qs2VX2jy1VaHjyDAEtE6CSsh+yyVHk+iouCbTK1aD\n3bBlvLHijiv/f2tsmcTWEyZpcRqLQiUCTagQrWN3Ir/4mMutwyeMwxc6EoZR\nJE549oCTkJBSUnzQGy03K0B27ktvj3X0h/PVn86oNf1NGbtzYQ09T00V3ceJ\nWFvMZKq73J7l0RnSzib2Xk0xiYmXF6kTzfb/o7zZrxRBj9kgcwuU5Fir99fy\n/9TI\r\n=JGxK\r\n-----END PGP SIGNATURE-----\r\n"
   },
-  "files": [
-    "index.js",
-    "build"
-  ],
-  "gitHead": "d5dffe2d5f2292fb8537784f222d1263b7ee0377",
   "homepage": "https://octicons.github.com",
   "keywords": [
     "GitHub",
@@ -83,12 +78,56 @@
     "svg",
     "octicons"
   ],
-  "license": "(OFL-1.1 OR MIT)",
+  "license": "MIT",
   "main": "index.js",
   "maintainers": [
     {
+      "name": "broccolini",
+      "email": "diana.mounter@gmail.com"
+    },
+    {
+      "name": "dgraham",
+      "email": "david.malcom.graham@gmail.com"
+    },
+    {
+      "name": "emilybrick",
+      "email": "emily.brick@buzzfeed.com"
+    },
+    {
+      "name": "emplums",
+      "email": "eplummer26@gmail.com"
+    },
+    {
+      "name": "jonrohan",
+      "email": "yes@jonrohan.codes"
+    },
+    {
+      "name": "josh",
+      "email": "josh@joshpeek.com"
+    },
+    {
       "name": "keithamus",
       "email": "npm@keithcirkel.co.uk"
+    },
+    {
+      "name": "koddsson",
+      "email": "koddsson@gmail.com"
+    },
+    {
+      "name": "mdo",
+      "email": "markdotto@gmail.com"
+    },
+    {
+      "name": "mislav",
+      "email": "mislav.marohnic@gmail.com"
+    },
+    {
+      "name": "mschoening",
+      "email": "max@max.wtf"
+    },
+    {
+      "name": "muan",
+      "email": "me@muanchiou.com"
     },
     {
       "name": "primer-css",
@@ -97,34 +136,6 @@
     {
       "name": "shawnbot",
       "email": "shawnbot-npm@nym.hush.com"
-    },
-    {
-      "name": "muan",
-      "email": "me@muanchiou.com"
-    },
-    {
-      "name": "mdo",
-      "email": "markdotto@gmail.com"
-    },
-    {
-      "name": "josh",
-      "email": "josh@joshpeek.com"
-    },
-    {
-      "name": "mislav",
-      "email": "mislav.marohnic@gmail.com"
-    },
-    {
-      "name": "broccolini",
-      "email": "diana.mounter@gmail.com"
-    },
-    {
-      "name": "jonrohan",
-      "email": "yes@jonrohan.codes"
-    },
-    {
-      "name": "dgraham",
-      "email": "david.malcom.graham@gmail.com"
     }
   ],
   "name": "octicons",
@@ -135,10 +146,10 @@
     "url": "git+https://github.com/primer/octicons.git"
   },
   "scripts": {
-    "build": "grunt",
-    "prepublish": "npm run build",
-    "test": "npm run build && ava --verbose \"test/**/*.js\""
+    "build": "script/build.js",
+    "lint": "eslint index.js tests/*.js",
+    "test": "ava --verbose 'tests/*.js'"
   },
-  "style": "build/octicons.css",
-  "version": "6.0.1"
+  "style": "index.scss",
+  "version": "8.5.0"
 }
