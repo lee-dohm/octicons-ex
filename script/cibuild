@@ -12,4 +12,5 @@ script/bootstrap
 
 echo "==> App is now ready to go!"
 
+mix format --check-formatted
 mix test
