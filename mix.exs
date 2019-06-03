@@ -8,17 +8,15 @@ defmodule Octicons.Mixfile do
       app: :octicons,
       version: @version,
       deps: deps(),
-
       name: "Octicons",
       description: "Provides the SVG versions of GitHub's Octicons to an Elixir application",
       source_url: "https://github.com/lee-dohm/octicons-ex",
       homepage_url: "https://github.com/lee-dohm/octicons-ex",
       docs: docs(),
       package: package(),
-
       elixir: "~> 1.7",
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod
     ]
   end
 

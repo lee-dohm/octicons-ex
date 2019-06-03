@@ -13,7 +13,7 @@ defmodule Octicons do
 
   alias Octicons.Storage
 
-  @type octicon_name :: String.t | atom
+  @type octicon_name :: String.t() | atom
   @type t :: map
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Octicons do
 
   def icon(name) do
     name
-    |> Storage.get_data
+    |> Storage.get_data()
     |> merge_additional_info(name)
   end
 
@@ -57,14 +57,15 @@ defmodule Octicons do
       iex> Octicons.toSVG(:beaker)
       "<svg aria-hidden=\"true\" class=\"octicons octicons-beaker\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M14.38 14.59L11 7V3h1V2H3v1h1v4L.63 14.59A1 1 0 0 0 1.54 16h11.94c.72 0 1.2-.75.91-1.41h-.01zM3.75 10L5 7V3h5v4l1.25 3h-7.5zM8 8h1v1H8V8zM7 7H6V6h1v1zm0-3h1v1H7V4zm0-3H6V0h1v1z\"/></svg>"
   """
-  @spec toSVG(octicon_name | t, keyword) :: String.t
+  @spec toSVG(octicon_name | t, keyword) :: String.t()
   def toSVG(icon, options \\ [])
 
   def toSVG(nil, _), do: nil
 
   def toSVG(name, options) when is_atom(name) or is_binary(name), do: toSVG(icon(name), options)
 
-  def toSVG(icon_data, options) when is_list(options), do: toSVG(icon_data, to_string_key_map(options))
+  def toSVG(icon_data, options) when is_list(options),
+    do: toSVG(icon_data, to_string_key_map(options))
 
   def toSVG(icon_data = %{}, options) do
     symbol = icon_data["symbol"]
@@ -95,7 +96,8 @@ defmodule Octicons do
   defp aria(map, _), do: map
 
   defp class(map, key, %{"class" => option_class}) do
-    Map.merge(map,
+    Map.merge(
+      map,
       %{
         "class" => String.trim("octicons octicons-#{key} #{option_class}")
       }
@@ -119,7 +121,8 @@ defmodule Octicons do
   defp dimensions(map, key, %{"height" => height}) do
     data = Storage.get_data(key)
 
-    Map.merge(map,
+    Map.merge(
+      map,
       %{
         "height" => height,
         "width" => round(parse_int(height) * data["width"] / data["height"])
@@ -130,7 +133,8 @@ defmodule Octicons do
   defp dimensions(map, key, %{"width" => width}) do
     data = Storage.get_data(key)
 
-    Map.merge(map,
+    Map.merge(
+      map,
       %{
         "height" => round(parse_int(width) * data["height"] / data["width"]),
         "width" => width
@@ -155,17 +159,17 @@ defmodule Octicons do
 
   defp html_attributes(key, options) do
     key
-    |> Storage.get_data
+    |> Storage.get_data()
     |> Map.merge(default_options(key))
     |> Map.merge(options)
     |> dimensions(key, options)
     |> class(key, options)
     |> aria(options)
     |> Map.drop(["figma", "keywords", "name", "path"])
-    |> Map.to_list
-    |> Enum.map(fn({key, value}) -> "#{key}=\"#{value}\"" end)
+    |> Map.to_list()
+    |> Enum.map(fn {key, value} -> "#{key}=\"#{value}\"" end)
     |> Enum.join(" ")
-    |> String.trim
+    |> String.trim()
   end
 
   defp merge_additional_info(nil, _), do: nil
@@ -183,6 +187,6 @@ defmodule Octicons do
   end
 
   defp to_string_key_map(list) do
-    Enum.reduce(list, %{}, fn({key, value}, map) -> Map.put(map, Atom.to_string(key), value) end)
+    Enum.reduce(list, %{}, fn {key, value}, map -> Map.put(map, Atom.to_string(key), value) end)
   end
 end

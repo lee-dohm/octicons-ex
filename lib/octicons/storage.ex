@@ -3,7 +3,7 @@ defmodule Octicons.Storage do
 
   require Logger
 
-  @spec start_link :: Agent.on_start | no_return
+  @spec start_link :: Agent.on_start() | no_return
   def start_link do
     {:ok, data} = read_octicons_data()
     {:ok, metadata} = read_octicons_metadata()
@@ -11,22 +11,21 @@ defmodule Octicons.Storage do
     Agent.start_link(fn -> %{data: data, metadata: metadata} end, name: __MODULE__)
   end
 
-  @spec get_data(String.t) :: map | nil
+  @spec get_data(String.t()) :: map | nil
   def get_data(key) do
-    Agent.get(__MODULE__, fn(storage) -> get_in(storage, [:data, key]) end)
+    Agent.get(__MODULE__, fn storage -> get_in(storage, [:data, key]) end)
   end
 
-  @spec get_version :: String.t | nil
+  @spec get_version :: String.t() | nil
   def get_version do
-    Agent.get(__MODULE__, fn(storage) -> get_in(storage, [:metadata, "version"]) end)
+    Agent.get(__MODULE__, fn storage -> get_in(storage, [:metadata, "version"]) end)
   end
 
   defp read_octicons_data do
     data_path = Path.expand("data.json", priv_dir())
 
     with {:ok, text} <- File.read(data_path),
-         {:ok, data} <- Jason.decode(text)
-    do
+         {:ok, data} <- Jason.decode(text) do
       {:ok, data}
     else
       err ->
@@ -39,8 +38,7 @@ defmodule Octicons.Storage do
     metadata_path = Path.expand("package.json", priv_dir())
 
     with {:ok, text} <- File.read(metadata_path),
-         {:ok, metadata} <- Jason.decode(text)
-    do
+         {:ok, metadata} <- Jason.decode(text) do
       {:ok, metadata}
     else
       err ->
