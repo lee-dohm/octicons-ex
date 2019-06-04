@@ -29,7 +29,6 @@ defmodule Octicons.Mixfile do
 
   defp deps do
     [
-      {:jason, "~> 1.1"},
       {:cmark, "~> 0.7", only: :dev},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:version_tasks, "~> 0.11.3", only: :dev}
