@@ -26,11 +26,11 @@
       %{
         "escapedName" => "octicons",
         "name" => "octicons",
-        "raw" => "octicons@8.5.0",
-        "rawSpec" => "8.5.0",
+        "raw" => "octicons@latest",
+        "rawSpec" => "latest",
         "scope" => nil,
-        "spec" => "8.5.0",
-        "type" => "version"
+        "spec" => "latest",
+        "type" => "tag"
       },
       "/Users/lee/Source/lee-dohm/octicons-ex"
     ]
@@ -43,13 +43,13 @@
   "_requested" => %{
     "escapedName" => "octicons",
     "name" => "octicons",
-    "raw" => "octicons@8.5.0",
-    "rawSpec" => "8.5.0",
+    "raw" => "octicons@latest",
+    "rawSpec" => "latest",
     "scope" => nil,
-    "spec" => "8.5.0",
-    "type" => "version"
+    "spec" => "latest",
+    "type" => "tag"
   },
-  "_from" => "octicons@8.5.0",
+  "_from" => "octicons@latest",
   "readme" => "ERROR: No README data found!",
   "dependencies" => %{"object-assign" => "^4.1.1"},
   "_id" => "octicons@8.5.0",
@@ -95,5 +95,5 @@
     "eslint" => "^5.8.0",
     "eslint-plugin-github" => "^1.6.0"
   },
-  "_spec" => "octicons@8.5.0"
+  "_spec" => "octicons@latest"
 }

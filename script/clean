@@ -9,3 +9,4 @@ mix clean
 rm -rf bin
 rm -rf deps
 rm -rf doc
+rm -rf node_modules

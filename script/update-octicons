@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# script/update-octicons: Updates the octicons definitions to the latest available on npm
+
+set -e
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+npm install --save octicons@latest
+mix run priv/format_octicons_data.exs
