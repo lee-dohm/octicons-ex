@@ -22,29 +22,17 @@ defmodule Octicons.Storage do
   end
 
   defp read_octicons_data do
-    data_path = Path.expand("data.json", priv_dir())
+    data_path = Path.expand("data.exs", priv_dir())
+    {data, _binding} = Code.eval_file(data_path)
 
-    with {:ok, text} <- File.read(data_path),
-         {:ok, data} <- Jason.decode(text) do
-      {:ok, data}
-    else
-      err ->
-        Logger.error("Error when reading Octicons data from priv directory: #{inspect(err)}")
-        err
-    end
+    {:ok, data}
   end
 
   defp read_octicons_metadata do
-    metadata_path = Path.expand("package.json", priv_dir())
+    metadata_path = Path.expand("metadata.exs", priv_dir())
+    {data, _binding} = Code.eval_file(metadata_path)
 
-    with {:ok, text} <- File.read(metadata_path),
-         {:ok, metadata} <- Jason.decode(text) do
-      {:ok, metadata}
-    else
-      err ->
-        Logger.error("Error when reading Octicons metadata from priv directory: #{inspect(err)}")
-        err
-    end
+    {:ok, data}
   end
 
   defp priv_dir do
