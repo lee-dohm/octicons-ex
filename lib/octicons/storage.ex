@@ -1,8 +1,6 @@
 defmodule Octicons.Storage do
   @moduledoc false
 
-  require Logger
-
   @spec start_link :: Agent.on_start() | no_return
   def start_link do
     {:ok, data} = read_octicons_data()
