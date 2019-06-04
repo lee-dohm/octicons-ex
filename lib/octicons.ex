@@ -4,11 +4,7 @@ defmodule Octicons do
 
   See [the website][octicons] for an up-to-date reference of all of the available icons.
 
-  > **Note:** This module is designed to operate identically to the [Node module][octicons-node] of
-  the same name.
-
   [octicons]: https://octicons.github.com/
-  [octicons-node]: https://www.npmjs.com/package/octicons
   """
 
   alias Octicons.Storage
