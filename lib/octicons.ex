@@ -53,26 +53,31 @@ defmodule Octicons do
   ## Examples
 
   ```
-  iex> Octicons.toSVG(:beaker)
+  iex> Octicons.to_svg(:beaker)
   "<svg aria-hidden=\"true\" class=\"octicons octicons-beaker\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M14.38 14.59L11 7V3h1V2H3v1h1v4L.63 14.59A1 1 0 0 0 1.54 16h11.94c.72 0 1.2-.75.91-1.41h-.01zM3.75 10L5 7V3h5v4l1.25 3h-7.5zM8 8h1v1H8V8zM7 7H6V6h1v1zm0-3h1v1H7V4zm0-3H6V0h1v1z\"/></svg>"
   ```
   """
-  @spec toSVG(octicon_name | t, keyword) :: String.t()
-  def toSVG(icon, options \\ [])
+  @doc since: "v0.7.0"
+  @spec to_svg(octicon_name | t, keyword) :: String.t()
+  def to_svg(icon, options \\ [])
 
-  def toSVG(nil, _), do: nil
+  def to_svg(nil, _), do: nil
 
-  def toSVG(name, options) when is_atom(name) or is_binary(name), do: toSVG(icon(name), options)
+  def to_svg(name, options) when is_atom(name) or is_binary(name), do: to_svg(icon(name), options)
 
-  def toSVG(icon_data, options) when is_list(options),
-    do: toSVG(icon_data, to_string_key_map(options))
+  def to_svg(icon_data, options) when is_list(options),
+    do: to_svg(icon_data, to_string_key_map(options))
 
-  def toSVG(icon_data = %{}, options) do
+  def to_svg(icon_data = %{}, options) do
     symbol = icon_data["symbol"]
     path = icon_data["path"]
 
     "<svg #{html_attributes(symbol, options)}>#{path}</svg>"
   end
+
+  @doc false
+  @deprecated "Use Octicons.to_svg/2 in its place."
+  def toSVG(icon, options \\ []), do: to_svg(icon, options)
 
   @doc """
   Get the version of the packaged Octicons data.
