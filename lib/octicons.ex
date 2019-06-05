@@ -81,7 +81,7 @@ defmodule Octicons do
 
   ```
   iex> Octicons.version()
-  "5.0.1"
+  "8.5.0"
   ```
   """
   @spec version() :: String.t()
