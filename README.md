@@ -13,9 +13,9 @@ See [the documentation](https://hexdocs.pm/octicons/Octicons.html#version/0) on 
 
 ## License
 
-All files except the contents of the `priv` directory: [MIT](LICENSE.md)
+[MIT](LICENSE.md)
 
-Files in `priv` are included from https://github.com/primer/octicons under the [MIT license][octicons-license] and are copyright GitHub, Inc.
+Some files in `priv` are translated from https://github.com/primer/octicons under the [MIT license][octicons-license]. The originals are copyright GitHub, Inc.
 
 [octicons]: https://octicons.github.com/
 [octicons-license]: https://github.com/primer/octicons/blob/master/LICENSE
