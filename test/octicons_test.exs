@@ -1,5 +1,6 @@
 defmodule OcticonsTest do
   use ExUnit.Case
+  doctest Octicons
 
   describe "icon/1" do
     test "when the named icon exists", _context do
