@@ -4,11 +4,7 @@ defmodule Octicons do
 
   See [the website][octicons] for an up-to-date reference of all of the available icons.
 
-  > **Note:** This module is designed to operate identically to the [Node module][octicons-node] of
-  the same name.
-
   [octicons]: https://octicons.github.com/
-  [octicons-node]: https://www.npmjs.com/package/octicons
   """
 
   alias Octicons.Storage
@@ -21,14 +17,16 @@ defmodule Octicons do
 
   ## Examples
 
-      iex> Octicons.icon(:beaker)
-      %{"aria-hidden" => "true", "class" => "octicons octicons-beaker",
-        "height" => "16",
-        "keywords" => ["experiment", "labs", "experimental", "feature", "test",
-         "science", "education", "study", "development", "testing"],
-        "path" => "<path fill-rule=\"evenodd\" d=\"M14.38 14.59L11 7V3h1V2H3v1h1v4L.63 14.59A1 1 0 0 0 1.54 16h11.94c.72 0 1.2-.75.91-1.41h-.01zM3.75 10L5 7V3h5v4l1.25 3h-7.5zM8 8h1v1H8V8zM7 7H6V6h1v1zm0-3h1v1H7V4zm0-3H6V0h1v1z\"/>",
-        "symbol" => "beaker", "version" => "1.1", "viewBox" => "0 0 16 16",
-        "width" => "16"}
+  ```
+  iex> Octicons.icon(:beaker)
+  %{"aria-hidden" => "true", "class" => "octicons octicons-beaker",
+    "height" => "16",
+    "keywords" => ["experiment", "labs", "experimental", "feature", "test",
+     "science", "education", "study", "development", "testing"],
+    "path" => "<path fill-rule=\"evenodd\" d=\"M14.38 14.59L11 7V3h1V2H3v1h1v4L.63 14.59A1 1 0 0 0 1.54 16h11.94c.72 0 1.2-.75.91-1.41h-.01zM3.75 10L5 7V3h5v4l1.25 3h-7.5zM8 8h1v1H8V8zM7 7H6V6h1v1zm0-3h1v1H7V4zm0-3H6V0h1v1z\"/>",
+    "symbol" => "beaker", "version" => "1.1", "viewBox" => "0 0 16 16",
+    "width" => "16"}
+  ```
   """
   @spec icon(octicon_name) :: t | nil
   def icon(name) when is_atom(name), do: icon(Atom.to_string(name))
@@ -54,8 +52,10 @@ defmodule Octicons do
 
   ## Examples
 
-      iex> Octicons.toSVG(:beaker)
-      "<svg aria-hidden=\"true\" class=\"octicons octicons-beaker\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M14.38 14.59L11 7V3h1V2H3v1h1v4L.63 14.59A1 1 0 0 0 1.54 16h11.94c.72 0 1.2-.75.91-1.41h-.01zM3.75 10L5 7V3h5v4l1.25 3h-7.5zM8 8h1v1H8V8zM7 7H6V6h1v1zm0-3h1v1H7V4zm0-3H6V0h1v1z\"/></svg>"
+  ```
+  iex> Octicons.toSVG(:beaker)
+  "<svg aria-hidden=\"true\" class=\"octicons octicons-beaker\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M14.38 14.59L11 7V3h1V2H3v1h1v4L.63 14.59A1 1 0 0 0 1.54 16h11.94c.72 0 1.2-.75.91-1.41h-.01zM3.75 10L5 7V3h5v4l1.25 3h-7.5zM8 8h1v1H8V8zM7 7H6V6h1v1zm0-3h1v1H7V4zm0-3H6V0h1v1z\"/></svg>"
+  ```
   """
   @spec toSVG(octicon_name | t, keyword) :: String.t()
   def toSVG(icon, options \\ [])
@@ -79,9 +79,12 @@ defmodule Octicons do
 
   ## Example
 
-      iex> Octicons.version()
-      "5.0.1"
+  ```
+  iex> Octicons.version()
+  "8.5.0"
+  ```
   """
+  @spec version() :: String.t()
   def version do
     Storage.get_version()
   end
