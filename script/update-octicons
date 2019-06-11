@@ -7,5 +7,5 @@ cd "$(dirname "$0")/.."
 
 script/bootstrap
 
-npm install --save octicons@latest
+npm install --save @primer/octicons@latest
 mix run priv/format_octicons_data.exs
