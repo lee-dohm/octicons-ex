@@ -79,6 +79,14 @@
     "path" => "<path fill-rule=\"evenodd\" d=\"M9 12h2l-3 3-3-3h2V7h2v5zm3-8c0-.44-.91-3-4.5-3C5.08 1 3 2.92 3 5 1.02 5 0 6.52 0 8c0 1.53 1 3 3 3h3V9.7H3C1.38 9.7 1.3 8.28 1.3 8c0-.17.05-1.7 1.7-1.7h1.3V5c0-1.39 1.56-2.7 3.2-2.7 2.55 0 3.13 1.55 3.2 1.8v1.2H12c.81 0 2.7.22 2.7 2.2 0 2.09-2.25 2.2-2.7 2.2h-2V11h2c2.08 0 4-1.16 4-3.5C16 5.06 14.08 4 12 4z\"/>",
     "width" => 16
   },
+  "repo-template" => %{
+    "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "18313:8"},
+    "height" => 16,
+    "keywords" => ["book", "new", "add", "template"],
+    "name" => "repo-template",
+    "path" => "<path fill-rule=\"evenodd\" d=\"M12 8V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v12c0 .55.45 1 1 1h2v2l1.5-1.5L6 16v-4H3v1H1v-2h7v-1H2V1h9v7h1zM4 2H3v1h1V2zM3 4h1v1H3V4zm1 2H3v1h1V6zm0 3H3V8h1v1zm6 3H8v2h2v2h2v-2h2v-2h-2v-2h-2v2z\"/>",
+    "width" => 14
+  },
   "checklist" => %{
     "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "0:108"},
     "height" => 16,
@@ -449,11 +457,11 @@
     "width" => 16
   },
   "shield" => %{
-    "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "0:762"},
+    "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "18304:8"},
     "height" => 16,
-    "keywords" => ["protect", "shield", "lock"],
+    "keywords" => ["security", "shield", "protection"],
     "name" => "shield",
-    "path" => "<path fill-rule=\"evenodd\" d=\"M7 0L0 2v6.02C0 12.69 5.31 16 7 16c1.69 0 7-3.31 7-7.98V2L7 0zM5 11l1.14-2.8a.568.568 0 0 0-.25-.59C5.33 7.25 5 6.66 5 6c0-1.09.89-2 1.98-2C8.06 4 9 4.91 9 6c0 .66-.33 1.25-.89 1.61-.19.13-.3.36-.25.59L9 11H5z\"/>",
+    "path" => "<path fill-rule=\"evenodd\" d=\"M0 2l7-2 7 2v6.02C14 12.69 8.69 16 7 16c-1.69 0-7-3.31-7-7.98V2zm1 .75L7 1l6 1.75v5.268C13 12.104 8.449 15 7 15c-1.449 0-6-2.896-6-6.982V2.75zm1 .75L7 2v12c-1.207 0-5-2.482-5-5.985V3.5z\"/>",
     "width" => 14
   },
   "flame" => %{
@@ -792,6 +800,14 @@
     "path" => "<path fill-rule=\"evenodd\" d=\"M8 9l3 6h-1l-2-4v5H7v-6l-2 5H4l2-5 2-1zM7 0H6v1h1V0zM5 3H4v1h1V3zM2 1H1v1h1V1zM.63 9a.52.52 0 0 0-.16.67l.55.92c.13.23.41.31.64.2l1.39-.66-1.16-2-1.27.86.01.01zm7.89-5.39l-5.8 3.95L3.95 9.7l6.33-3.03-1.77-3.06h.01zm4.22 1.28l-1.47-2.52a.51.51 0 0 0-.72-.17l-1.2.83 1.84 3.2 1.33-.64c.27-.13.36-.44.22-.7z\"/>",
     "width" => 14
   },
+  "shield-x" => %{
+    "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "18304:6"},
+    "height" => 16,
+    "keywords" => ["security", "shield", "protection", "fail"],
+    "name" => "shield-x",
+    "path" => "<path d=\"M6.5 0L0 1.875v5.644C0 11.897 4.93 15 6.5 15c.63 0 1.8-.5 2.976-1.38l-.663-.663C7.889 13.625 6.996 14 6.5 14 5.172 14 1 11.31 1 7.516V2.625L6.5 1 12 2.625v4.23l.48.48.52-.52v-4.94L6.5 0zm5.98 8.75L10.73 7 9.25 8.48 11 10.23l-1.75 1.75 1.48 1.48 1.75-1.75 1.75 1.75 1.48-1.48-1.75-1.75 1.75-1.75L14.23 7l-1.75 1.75zM2 3.375L6.5 2v11C5.414 13 2 10.724 2 7.514V3.375z\"/>",
+    "width" => 16
+  },
   "x" => %{
     "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "0:932"},
     "height" => 16,
@@ -937,6 +953,14 @@
     "path" => "<path fill-rule=\"evenodd\" d=\"M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z\"/>",
     "width" => 14
   },
+  "dependent" => %{
+    "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "18304:2"},
+    "height" => 16,
+    "keywords" => ["dependency", "dependent", "file"],
+    "name" => "dependent",
+    "path" => "<path d=\"M1 1h7.5l2 2H9L8 2H1v12h10v-1h1v1c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1zm9 6h3v1h-3V7zm2 2h-2v1h2V9zM8.583 4h4.375L15 6v5.429a.58.58 0 0 1-.583.571H8.583A.58.58 0 0 1 8 11.429V10h1v1h5V6.5L12.5 5H9v1H8V4.571A.58.58 0 0 1 8.583 4zM9.5 7H6.667V5l-4 3 4 3V9H9.5V7z\"/>",
+    "width" => 16
+  },
   "arrow-down" => %{
     "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "0:8"},
     "height" => 16,
@@ -992,6 +1016,14 @@
     "name" => "paintcan",
     "path" => "<path fill-rule=\"evenodd\" d=\"M6 0C2.69 0 0 2.69 0 6v1c0 .55.45 1 1 1v5c0 1.1 2.24 2 5 2s5-.9 5-2V8c.55 0 1-.45 1-1V6c0-3.31-2.69-6-6-6zm3 10v.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V10c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-2c0-.28-.22-.5-.5-.5s-.5.22-.5.5v.5c0 .55-.45 1-1 1s-1-.45-1-1v-1c-.55 0-1-.45-1-1V7.2c.91.49 2.36.8 4 .8 1.64 0 3.09-.31 4-.8V9c0 .55-.45 1-1 1zM6 7c-1.68 0-3.12-.41-3.71-1C2.88 5.41 4.32 5 6 5c1.68 0 3.12.41 3.71 1-.59.59-2.03 1-3.71 1zm0-3c-2.76 0-5 .89-5 2 0-2.76 2.24-5 5-5s5 2.24 5 5c0-1.1-2.24-2-5-2z\"/>",
     "width" => 12
+  },
+  "repo-template-private" => %{
+    "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "18313:16"},
+    "height" => 16,
+    "keywords" => ["book", "new", "template"],
+    "name" => "repo-template-private",
+    "path" => "<path fill-rule=\"evenodd\" d=\"M12 6c0-.55-.45-1-1-1h-1V4c0-2.2-1.8-4-4-4S2 1.8 2 4v1H1c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h5v-1H2V6h9v2h1V6zM8.21 5V4c0-1.22-.98-2.2-2.2-2.2-1.22 0-2.2.98-2.2 2.2v1h4.4zM12 12h2v2h-2v2h-2v-2H8v-2h2v-2h2v2zm-9 0h1v-1H3v1zm0-5h1v1H3V7zm1 2H3v1h1V9z\"/>",
+    "width" => 14
   },
   "bold" => %{
     "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "0:38"},
@@ -1177,6 +1209,14 @@
     "name" => "diff",
     "path" => "<path fill-rule=\"evenodd\" d=\"M6 7h2v1H6v2H5V8H3V7h2V5h1v2zm-3 6h5v-1H3v1zM7.5 2L11 5.5V15c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h6.5zM10 6L7 3H1v12h9V6zM8.5 0H3v1h5l4 4v8h1V4.5L8.5 0z\"/>",
     "width" => 13
+  },
+  "shield-check" => %{
+    "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "18304:4"},
+    "height" => 16,
+    "keywords" => ["security", "shield", "protection", "check", "success"],
+    "name" => "shield-check",
+    "path" => "<path d=\"M6.5 0L0 1.875v5.644C0 11.897 4.93 15 6.5 15c.741 0 2.232-.692 3.6-1.884l-.713-.61C8.275 13.453 7.099 14 6.5 14 5.172 14 1 11.31 1 7.516V2.625L6.5 1 12 2.625v4.891c0 .128-.005.255-.014.38L13 6.713V1.875L6.5 0zm5 10l-2-1.5L8 10l3.5 3L16 8l-1.5-1.5-3 3.5zM2 3.375L6.5 2v11C5.414 13 2 10.724 2 7.514V3.375z\"/>",
+    "width" => 16
   },
   "credit-card" => %{
     "figma" => %{"file" => "FP7lqd1V00LUaT5zvdklkkZr", "id" => "0:173"},

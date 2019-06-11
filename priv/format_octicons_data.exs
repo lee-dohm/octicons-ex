@@ -1,5 +1,5 @@
-data_path = Path.expand("../node_modules/octicons/build/data.json", __DIR__)
-metadata_path = Path.expand("../node_modules/octicons/package.json", __DIR__)
+data_path = Path.expand("../node_modules/@primer/octicons/build/data.json", __DIR__)
+metadata_path = Path.expand("../node_modules/@primer/octicons/package.json", __DIR__)
 
 data =
   data_path
