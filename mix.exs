@@ -32,7 +32,7 @@ defmodule Octicons.Mixfile do
       {:cmark, "~> 0.7", only: :dev},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:jason, "~> 1.1", only: :dev},
-      {:version_tasks, "~> 0.11.3", only: :dev}
+      {:version_tasks, "~> 0.12.0", only: :dev}
     ]
   end
 
