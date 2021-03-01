@@ -2,6 +2,6 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "@primer/octicons": "^9.0.0"
+    "@primer/octicons": "^12.1.0"
   }
 }
