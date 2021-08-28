@@ -1,4 +1,4 @@
-The MIT License (MIT)
+# The MIT License (MIT)
 
 Copyright &copy; 2017 [Lee Dohm](http://www.lee-dohm.com)
 

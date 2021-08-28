@@ -1,17 +1,15 @@
 defmodule Octicons.Mixfile do
   use Mix.Project
 
+  @source_url "https://github.com/lee-dohm/octicons-ex"
   @version "0.8.0"
 
   def project do
     [
       app: :octicons,
+      name: "Octicons",
       version: @version,
       deps: deps(),
-      name: "Octicons",
-      description: "Provides the SVG versions of GitHub's Octicons to an Elixir application",
-      source_url: "https://github.com/lee-dohm/octicons-ex",
-      homepage_url: "https://github.com/lee-dohm/octicons-ex",
       docs: docs(),
       package: package(),
       elixir: "~> 1.7",
@@ -30,7 +28,7 @@ defmodule Octicons.Mixfile do
   defp deps do
     [
       {:cmark, "~> 0.7", only: :dev},
-      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.21.3", only: :dev, runtime: false},
       {:jason, "~> 1.1", only: :dev},
       {:version_tasks, "~> 0.11.3", only: :dev}
     ]
@@ -38,16 +36,24 @@ defmodule Octicons.Mixfile do
 
   defp docs do
     [
+      extras: [
+        "LICENSE.md": [title: "License"],
+        "README.md": [title: "Overview"]
+      ],
       main: "readme",
-      extras: ["README.md", "LICENSE.md"]
+      source_url: @source_url,
+      source_ref: "v#{@version}",
+      homepage_url: @source_url,
+      formatters: ["html"]
     ]
   end
 
   defp package do
     [
+      description: "Provides the SVG versions of GitHub's Octicons to an Elixir application",
       licenses: ["MIT"],
       maintainers: ["Lee Dohm"],
-      links: %{"GitHub" => "https://github.com/lee-dohm/octicons-ex"}
+      links: %{"GitHub" => @source_url}
     ]
   end
 end
